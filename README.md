@@ -8,14 +8,12 @@
 
 4. Elaborar el modelo entidad-relación para una Tienda de material informático:
 
-5. Tenemos que diseñar una base de datos para una empresa de material informático.
+5. Elaborar el modelo entidad-relación para una Agencia de viajes.
 
-6. Elaborar el modelo entidad-relación para una Agencia de viajes.
+6. Elaborar el modelo entidad-relación para una Exámenes:
 
-7. Elaborar el modelo entidad-relación para una Exámenes:
+7. Elaborar el modelo entidad-relación para un Concesionario.
 
-8. Elaborar el modelo entidad-relación para un Concesionario.
+8. Elaborar el modelo entidad-relación para una Club Náutico.
 
-9. Elaborar el modelo entidad-relación para una Club Náutico.
-
-10. Elaborar el modelo entidad-relación para una Información policial.
+9. Elaborar el modelo entidad-relación para una Información policial.
