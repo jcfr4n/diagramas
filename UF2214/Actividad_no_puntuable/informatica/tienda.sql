@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-08-2022 a las 23:56:30
+-- Tiempo de generación: 04-08-2022 a las 16:33:10
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -41,16 +41,16 @@ CREATE TABLE `articulos` (
 --
 
 INSERT INTO `articulos` (`clave_articulo`, `nombre`, `precio`, `clave_fabricante`) VALUES
-(1, 'Teclado', 100, 3),
-(2, 'Disco duro 300 Gb', 500, 5),
-(3, 'Mouse', 80, 3),
-(4, 'Memoria USB', 140, 4),
-(5, 'Memoria RAM', 290, 1),
-(6, 'Disco duro extraible 250 Gb', 650, 5),
-(7, 'Memoria USB', 279, 1),
-(8, 'DVD Rom', 450, 2),
-(9, 'CD Rom', 200, 2),
-(10, 'Tarjeta de red', 180, 3);
+(1, 'Teclado', 90, 3),
+(2, 'Disco duro 300 Gb', 440, 5),
+(3, 'Mouse', 72, 3),
+(4, 'Memoria USB', 126, 4),
+(5, 'Memoria RAM', 261, 1),
+(7, 'Memoria USB', 251, 1),
+(8, 'DVD Rom', 395, 2),
+(9, 'CD Rom', 180, 2),
+(10, 'Tarjeta de red', 162, 3),
+(11, 'Altavoces', 108, 2);
 
 -- --------------------------------------------------------
 
