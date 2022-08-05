@@ -1,0 +1,73 @@
+INSERT INTO autor VALUES (1, "Fernando López Segura");
+INSERT INTO autor VALUES (2, "Eduardo Cruz Ruiz");
+INSERT INTO autor VALUES (3, "Lilian Valecia Carrillo");
+INSERT INTO autor VALUES (4, "Juan Carlos Segundo Elias");
+INSERT INTO autor VALUES (5, "Jair Cuellar Artega");
+INSERT INTO autor VALUES (6, "Karla Rojas García");
+INSERT INTO autor VALUES (7, "ke ffhg fff");
+
+INSERT INTO editorial VALUES (1, "Trillas", "AV. 20 DE NOVIEMBRE #61 Col. Centro", "23456789");
+INSERT INTO editorial VALUES (2, "Pearson", "AV. INDEPENDENCIA #956 COL. PIRAGUA", "56565655");
+INSERT INTO editorial VALUES (3, "McGrawHill", "AV. 5 DE MAYO #67 COL. TUXTEPEC", "32222224");
+INSERT INTO editorial VALUES (4, "AlfaOmega", "BLVD. BENITO JUAREZ #78 COL. TUXTEPEC", "87876887");
+INSERT INTO editorial VALUES (5, "Thomsomp", "ADOLFO LOPEZ MATEOS #12 COL. TUXTEPEC", "12345678");
+INSERT INTO editorial VALUES (6, "Libertad", "AV. MANCILLA ESQ. ALDAMA COL. LAZARO CARDENAS", "98654332");
+
+INSERT INTO tema VALUES (1, "Programación");
+INSERT INTO tema VALUES (2, "Biología");
+INSERT INTO tema VALUES (3, "Economía / Marketing");
+INSERT INTO tema VALUES (4, "Administración empresas");
+INSERT INTO tema VALUES (5, "Química");
+INSERT INTO tema VALUES (6, "Ingeniería");
+
+INSERT INTO socio VALUES (1, "Alfredo Hernández Mendoza", "Dirección 1", "alfred123@gmail.com", "12345678", 'Foto_1.png');
+INSERT INTO socio VALUES (2, "Juan Alberto Ramírez Sandoval", "Dirección 2", "juanal_66@hotmail.com", "91847567", 'Foto_2.png');
+INSERT INTO socio VALUES (3, "Enrique Alberto García Aguado", "Dirección 3", "", "22885534", 'Foto_3.png');
+INSERT INTO socio VALUES (4, "Esmeralda López Cabrera", "Dirección 4", "esme27_p@yahoo.com.mx", "45263489", 'Foto_4.png');
+INSERT INTO socio VALUES (5, "Janeth Soto Cruz", "Dirección 5", "janeth11@hotmail.com", "64829164", 'Foto_5.png');
+INSERT INTO socio VALUES (6, "Marco Antonio Pérez Díaz", "Dirección 6", "makr@gmail.com", "88335522", 'Foto_6.png');
+
+INSERT INTO libro VALUES (1, "1234567891", "El Lengu de Prgramación C", 27, 1, 4, 1);
+INSERT INTO libro VALUES (2, "1357935799", "Fundamentos de Programación", 12, 1, 6, 1);
+INSERT INTO libro VALUES (3, "1010345655", "The Book of Ruby", 9, 1, 5, 1);
+INSERT INTO libro VALUES (4, "3456789212", "Programación en C/C++", 25, 1, 3, 1);
+INSERT INTO libro VALUES (5, "7578799145", "Introducción a la teoría general de la administración", 45, 6, 2, 4);
+INSERT INTO libro VALUES (6, "3238845533", "Administración Moderna", 12, 6, 1, 4);
+INSERT INTO libro VALUES (7, "5267174899", "Generación de Modelos de Negocio", 16, 6, 1, 4);
+INSERT INTO libro VALUES (8, "2456789011", "Fundamentos de Administración Financiera", 99, 6, 1, 4);
+INSERT INTO libro VALUES (9, "3454565890", "Invitación a la Biología", 11, 3, 1, 2);
+INSERT INTO libro VALUES (10, "2224579900", "Biología molecular de la célula", 14, 3, 1, 2);
+INSERT INTO libro VALUES (11, "0988277777", "Biología: ciencia y naturaleza", 22, 3, 1, 2);
+INSERT INTO libro VALUES (12, "6372653847", "Atlas de Biología", 1, 3, 1, 2);
+INSERT INTO libro VALUES (13, "9823525255", "Sistemas de Control para Ingeniería", 5, 4, 1, 6);
+INSERT INTO libro VALUES (14, "2324611234", "Circuitos Eléctricos", 10, 4, 1, 6);
+INSERT INTO libro VALUES (15, "7774828288", "Sismas de Comunicaciones", 7, 4, 1, 6);
+INSERT INTO libro VALUES (16, "2343454577", "Química General", 2, 5, 1, 5);
+INSERT INTO libro VALUES (17, "5568883333", "Química Orgánica", 3, 5, 1, 5);
+INSERT INTO libro VALUES (18, "1111166988", "Principios de Economía", 1, 2, 1, 3);
+INSERT INTO libro VALUES (19, "0044523255", "La riqueza de las naciones", 4, 2, 1, 3);
+INSERT INTO libro VALUES (20, "5767676722", "Economía y Sociedad", 17, 2, 1, 3);
+INSERT INTO libro VALUES (21, "3235567986", "Marketi de Guerra", 1, 2, 1, 3);
+INSERT INTO libro VALUES (22, "32358667986", "sdsdsadsa", 1, 2, 1, 3);
+
+INSERT INTO prestamo VALUES (1, NOW(), "2016-12-25", 1, 6);
+INSERT INTO prestamo VALUES (2, NOW(), "2016-12-24", 4, 4);
+INSERT INTO prestamo VALUES (3, NOW(), "2016-12-27", 5, 1);
+INSERT INTO prestamo VALUES (4, NOW(), "2017-01-14", 1, 2);
+INSERT INTO prestamo VALUES (5, NOW(), "2016-12-25", 3, 3);
+INSERT INTO prestamo VALUES (6, NOW(), "2016-12-25", 1, 5);
+INSERT INTO prestamo VALUES (7, NOW(), "2016-12-31", 4, 3);
+INSERT INTO prestamo VALUES (8, NOW(), "2017-12-28", 5, 19);
+INSERT INTO prestamo VALUES (9, NOW(), "2017-02-20", 4, 5);
+INSERT INTO prestamo VALUES (10, NOW(), "2017-02-21", 1, 12);
+INSERT INTO prestamo VALUES (11, NOW(), "2016-12-25", 1, 15);
+INSERT INTO prestamo VALUES (12, NOW(), "2016-12-24", 4, 4);
+INSERT INTO prestamo VALUES (13, NOW(), "2016-12-27", 5, 1);
+INSERT INTO prestamo VALUES (14, NOW(), "2017-01-14", 1, 7);
+INSERT INTO prestamo VALUES (15, NOW(), "2016-12-25", 3, 8);
+INSERT INTO prestamo VALUES (16, NOW(), "2016-12-25", 1, 9);
+INSERT INTO prestamo VALUES (17, NOW(), "2016-12-31", 4, 10);
+INSERT INTO prestamo VALUES (18, NOW(), "2017-12-28", 5, 11);
+INSERT INTO prestamo VALUES (19, NOW(), "2017-02-20", 4, 18);
+INSERT INTO prestamo VALUES (20, NOW(), "2017-02-21", 1, 20);
+
