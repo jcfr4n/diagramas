@@ -1,33 +1,29 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Servidor: localhost
--- Tiempo de generación: 23-08-2022 a las 00:15:20
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de datos: `world2`
---
 CREATE DATABASE IF NOT EXISTS `world2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `world2`;
 
 DELIMITER $$
---
--- Funciones
---
-CREATE DEFINER=`root`@`localhost` FUNCTION `distritosPais` (`codeCountry` VARCHAR(3)) RETURNS INT(10) UNSIGNED READS SQL DATA BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `distritosPoblacionMayorMedia` (IN `nombrePais` VARCHAR(52) CHARSET utf8mb4)   BEGIN
+declare codeCountry varchar(3);
+set codeCountry = (SELECT buscarCountryCode(nombrePais));
+SELECT ci.District, ci.Population from city ci WHERE ci.CountryCode = codeCountry AND ci.Population > (SELECT poblacionMediaDistritoPais(codeCountry));
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `buscarCountryCode` (`nombrePais` VARCHAR(52) CHARSET utf8mb4) RETURNS VARCHAR(3) CHARSET utf8mb4  BEGIN
+DECLARE CountryCode varchar(3);
+set CountryCode = (SELECT c.Code FROM country c where c.Name LIKE nombrePais LIMIT 1);
+                  RETURN CountryCode;
+                  END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `distritosPais` (`codeCountry` VARCHAR(3) CHARSET utf8mb4) RETURNS INT(10) UNSIGNED READS SQL DATA BEGIN
 
   DECLARE distritos INT UNSIGNED;
 
@@ -38,7 +34,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `distritosPais` (`codeCountry` VARCHA
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` FUNCTION `poblacionMediaDistritoPais` (`codeCountry` VARCHAR(3)) RETURNS FLOAT  BEGIN
+CREATE DEFINER=`root`@`localhost` FUNCTION `poblacionMediaDistritoPais` (`codeCountry` VARCHAR(3) CHARSET utf8mb4) RETURNS FLOAT  BEGIN
     DECLARE
         media FLOAT ;
     SET
@@ -60,23 +56,13 @@ END$$
 
 DELIMITER ;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `city`
---
-
 CREATE TABLE `city` (
   `ID` int(11) NOT NULL,
-  `Name` char(35) COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '',
-  `CountryCode` char(3) COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '',
-  `District` char(20) COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '',
+  `Name` char(35) NOT NULL DEFAULT '',
+  `CountryCode` char(3) NOT NULL DEFAULT '',
+  `District` char(20) NOT NULL DEFAULT '',
   `Population` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
-
---
--- Volcado de datos para la tabla `city`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `city` VALUES
 (1, 'Kabul', 'AFG', 'Kabol', 1780000),
@@ -4162,33 +4148,23 @@ INSERT INTO `city` VALUES
 (4078, 'Nablus', 'PSE', 'Nablus', 100231),
 (4079, 'Rafah', 'PSE', 'Rafah', 92020);
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `country`
---
-
 CREATE TABLE `country` (
-  `Code` char(3) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
-  `Name` char(52) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
-  `Continent` enum('Asia','Europe','North America','Africa','Oceania','Antarctica','South America') CHARACTER SET utf8mb4 NOT NULL DEFAULT 'Asia',
-  `Region` char(26) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
+  `Code` char(3) NOT NULL DEFAULT '',
+  `Name` char(52) NOT NULL DEFAULT '',
+  `Continent` enum('Asia','Europe','North America','Africa','Oceania','Antarctica','South America') NOT NULL DEFAULT 'Asia',
+  `Region` char(26) NOT NULL DEFAULT '',
   `SurfaceArea` decimal(10,2) NOT NULL DEFAULT 0.00,
   `IndepYear` smallint(6) DEFAULT NULL,
   `Population` int(11) NOT NULL DEFAULT 0,
   `LifeExpectancy` decimal(3,1) DEFAULT NULL,
   `GNP` decimal(10,2) DEFAULT NULL,
   `GNPOld` decimal(10,2) DEFAULT NULL,
-  `LocalName` char(45) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
-  `GovernmentForm` char(45) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
-  `HeadOfState` char(60) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `LocalName` char(45) NOT NULL DEFAULT '',
+  `GovernmentForm` char(45) NOT NULL DEFAULT '',
+  `HeadOfState` char(60) DEFAULT NULL,
   `Capital` int(11) DEFAULT NULL,
-  `Code2` char(2) CHARACTER SET utf8mb4 NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
-
---
--- Volcado de datos para la tabla `country`
---
+  `Code2` char(2) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `country` VALUES
 ('ABW', 'Aruba', 'North America', 'Caribbean', '193.00', NULL, 103000, '78.4', '828.00', '793.00', 'Aruba', 'Nonmetropolitan Territory of The Netherlands', 'Beatrix', 129, 'AW'),
@@ -4431,22 +4407,12 @@ INSERT INTO `country` VALUES
 ('ZMB', 'Zambia', 'Africa', 'Eastern Africa', '752618.00', 1964, 9169000, '37.2', '3377.00', '3922.00', 'Zambia', 'Republic', 'Frederick Chiluba', 3162, 'ZM'),
 ('ZWE', 'Zimbabwe', 'Africa', 'Eastern Africa', '390757.00', 1980, 11669000, '37.8', '5951.00', '8670.00', 'Zimbabwe', 'Republic', 'Robert G. Mugabe', 4068, 'ZW');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `countrylanguage`
---
-
 CREATE TABLE `countrylanguage` (
   `CountryCode` char(3) NOT NULL DEFAULT '',
   `Language` char(30) NOT NULL DEFAULT '',
   `IsOfficial` enum('T','F') NOT NULL DEFAULT 'F',
   `Percentage` decimal(4,1) NOT NULL DEFAULT 0.0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `countrylanguage`
---
 
 INSERT INTO `countrylanguage` VALUES
 ('ABW', 'Dutch', 'T', '5.3'),
@@ -5434,46 +5400,22 @@ INSERT INTO `countrylanguage` VALUES
 ('ZWE', 'Nyanja', 'F', '2.2'),
 ('ZWE', 'Shona', 'F', '72.1');
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `city`
---
 ALTER TABLE `city`
   ADD PRIMARY KEY (`ID`);
 
---
--- Indices de la tabla `countrylanguage`
---
 ALTER TABLE `countrylanguage`
   ADD PRIMARY KEY (`CountryCode`,`Language`),
   ADD KEY `CountryCode` (`CountryCode`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
 
---
--- AUTO_INCREMENT de la tabla `city`
---
 ALTER TABLE `city`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4080;
 
---
--- Restricciones para tablas volcadas
---
 
---
--- Filtros para la tabla `city`
---
 ALTER TABLE `city`
   ADD CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`);
 
---
--- Filtros para la tabla `countrylanguage`
---
 ALTER TABLE `countrylanguage`
   ADD CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`);
 COMMIT;
