@@ -1,0 +1,55 @@
+.container {
+    padding: 0 5rem;
+}
+
+h1 {
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+}
+
+#lucia {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#productos {
+    width: 100%;
+}
+dt{
+    font-weight: bold;
+}
+.celda {
+    width: 33.33%;
+}
+
+
+.fchild {
+    display: flex;
+    justify-content: space-around;
+}
+.fchild>span {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+
+.schild {
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: center;
+}
+.schild>div>img {
+    width: 100%;
+}
+
+em > h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+ul>li>span {
+    font-weight: bold;
+}
