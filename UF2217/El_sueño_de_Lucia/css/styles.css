@@ -44,6 +44,10 @@ dt{
 .schild>div>img {
     width: 100%;
 }
+.schild>div {
+    
+    margin: 1px;
+}
 
 em > h2 {
     font-family: 'Times New Roman', Times, serif;
