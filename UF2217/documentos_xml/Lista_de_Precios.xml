@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<precios>
+    <producto>
+        <nombre>Sofá</nombre>
+        <precio>642</precio>
+    </producto>
+    <producto>
+        <nombre>Mesa</nombre>
+        <precio>305</precio>
+    </producto>
+    <producto>
+        <nombre>Lámpara</nombre>
+        <precio>89</precio>
+    </producto>
+</precios>
