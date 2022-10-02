@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.0
+- https://www.phpmyadmin.net
+-
+- Servidor: localhost
+- Tiempo de generación: 29-09-2022 a las 22:21:13
+- Versión del servidor: 10.4.24-MariaDB
+- Versión de PHP: 8.1.6
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="tienda" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="articulos">
+                CREATE TABLE `articulos` (
+                  `clave_articulo` int(11) NOT NULL,
+                  `nombre` varchar(30) DEFAULT NULL,
+                  `precio` int(11) DEFAULT NULL,
+                  `clave_fabricante` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`clave_articulo`),
+                  KEY `clave_fabricante` (`clave_fabricante`),
+                  CONSTRAINT `articulos_ibfk_1` FOREIGN KEY (`clave_fabricante`) REFERENCES `fabricantes` (`clave_fabricante`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="fabricantes">
+                CREATE TABLE `fabricantes` (
+                  `clave_fabricante` int(11) NOT NULL,
+                  `nombre` varchar(30) DEFAULT NULL,
+                  PRIMARY KEY (`clave_fabricante`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'tienda'
+    -->
+    <database name="tienda">
+        <!-- Tabla articulos -->
+        <table name="articulos">
+            <column name="clave_articulo">1</column>
+            <column name="nombre">Teclado</column>
+            <column name="precio">90</column>
+            <column name="clave_fabricante">3</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">2</column>
+            <column name="nombre">Disco duro 300 Gb</column>
+            <column name="precio">440</column>
+            <column name="clave_fabricante">5</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">3</column>
+            <column name="nombre">Mouse</column>
+            <column name="precio">72</column>
+            <column name="clave_fabricante">3</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">4</column>
+            <column name="nombre">Memoria USB</column>
+            <column name="precio">126</column>
+            <column name="clave_fabricante">4</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">5</column>
+            <column name="nombre">Memoria RAM</column>
+            <column name="precio">261</column>
+            <column name="clave_fabricante">1</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">7</column>
+            <column name="nombre">Memoria USB</column>
+            <column name="precio">251</column>
+            <column name="clave_fabricante">1</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">8</column>
+            <column name="nombre">DVD Rom</column>
+            <column name="precio">395</column>
+            <column name="clave_fabricante">2</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">9</column>
+            <column name="nombre">CD Rom</column>
+            <column name="precio">180</column>
+            <column name="clave_fabricante">2</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">10</column>
+            <column name="nombre">Tarjeta de red</column>
+            <column name="precio">162</column>
+            <column name="clave_fabricante">3</column>
+        </table>
+        <table name="articulos">
+            <column name="clave_articulo">11</column>
+            <column name="nombre">Altavoces</column>
+            <column name="precio">108</column>
+            <column name="clave_fabricante">2</column>
+        </table>
+        <!-- Tabla fabricantes -->
+        <table name="fabricantes">
+            <column name="clave_fabricante">1</column>
+            <column name="nombre">Kingston</column>
+        </table>
+        <table name="fabricantes">
+            <column name="clave_fabricante">2</column>
+            <column name="nombre">Adata</column>
+        </table>
+        <table name="fabricantes">
+            <column name="clave_fabricante">3</column>
+            <column name="nombre">Logitech</column>
+        </table>
+        <table name="fabricantes">
+            <column name="clave_fabricante">4</column>
+            <column name="nombre">Lexar</column>
+        </table>
+        <table name="fabricantes">
+            <column name="clave_fabricante">5</column>
+            <column name="nombre">Seagate</column>
+        </table>
+    </database>
+</pma_xml_export>

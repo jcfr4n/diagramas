@@ -1,0 +1,210 @@
+<Discoteca>
+    <Disco>
+    <Titulo>Empire Burlesque</Titulo>
+    <Interprete>Bob Dylan</Interprete>
+    <Pais>USA</Pais>
+    <Discografica>Columbia</Discografica>
+    <Precio>10.90</Precio>
+    <Year>1985</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Hide your heart</Titulo>
+    <Interprete>Bonnie Tyler</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>CBS Records</Discografica>
+    <Precio>9.90</Precio>
+    <Year>1988</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Greatest Hits</Titulo>
+    <Interprete>Dolly Parton</Interprete>
+    <Pais>USA</Pais>
+    <Discografica>RCA</Discografica>
+    <Precio>9.90</Precio>
+    <Year>1982</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Still got the blues</Titulo>
+    <Interprete>Gary Moore</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Virgin records</Discografica>
+    <Precio>10.20</Precio>
+    <Year>1990</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Eros</Titulo>
+    <Interprete>Eros Ramazzotti</Interprete>
+    <Pais>EU</Pais>
+    <Discografica>BMG</Discografica>
+    <Precio>9.90</Precio>
+    <Year>1997</Year>
+    </Disco>
+    <Disco>
+    <Titulo>One night only</Titulo>
+    <Interprete>Bee Gees</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Polydor</Discografica>
+    <Precio>10.90</Precio>
+    <Year>1998</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Sylvias Mother</Titulo>
+    <Interprete>Dr.Hook</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>CBS</Discografica>
+    <Precio>8.10</Precio>
+    <Year>1973</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Maggie May</Titulo>
+    <Interprete>Rod Stewart</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Pickwick</Discografica>
+    <Precio>8.50</Precio>
+    <Year>1990</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Romanza</Titulo>
+    <Interprete>Andrea Bocelli</Interprete>
+    <Pais>EU</Pais>
+    <Discografica>Polydor</Discografica>
+    <Precio>10.80</Precio>
+    <Year>1996</Year>
+    </Disco>
+    <Disco>
+    <Titulo>When a man loves a woman</Titulo>
+    <Interprete>Percy Sledge</Interprete>
+    <Pais>USA</Pais>
+    <Discografica>Atlantic</Discografica>
+    <Precio>8.70</Precio>
+    <Year>1987</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Black angel</Titulo>
+    <Interprete>Savage Rose</Interprete>
+    <Pais>EU</Pais>
+    <Discografica>Mega</Discografica>
+    <Precio>10.90</Precio>
+    <Year>1995</Year>
+    </Disco>
+    <Disco>
+    <Titulo>1999 Grammy Nominees</Titulo>
+    <Interprete>Many</Interprete>
+    <Pais>USA</Pais>
+    <Discografica>Grammy</Discografica>
+    <Precio>10.20</Precio>
+    <Year>1999</Year>
+    </Disco>
+    <Disco>
+    <Titulo>For the good times</Titulo>
+    <Interprete>Kenny Rogers</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Mucik Master</Discografica>
+    <Precio>8.70</Precio>
+    <Year>1995</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Big Willie style</Titulo>
+    <Interprete>Will Smith</Interprete>
+    <Pais>USA</Pais>
+    <Discografica>Columbia</Discografica>
+    <Precio>9.90</Precio>
+    <Year>1997</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Tupelo Honey</Titulo>
+    <Interprete>Van Morrison</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Polydor</Discografica>
+    <Precio>8.20</Precio>
+    <Year>1971</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Soulsville</Titulo>
+    <Interprete>Jorn Hoel</Interprete>
+    <Pais>Norway</Pais>
+    <Discografica>WEA</Discografica>
+    <Precio>7.90</Precio>
+    <Year>1996</Year>
+    </Disco>
+    <Disco>
+    <Titulo>The very best of</Titulo>
+    <Interprete>Cat Stevens</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Island</Discografica>
+    <Precio>8.90</Precio>
+    <Year>1990</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Stop</Titulo>
+    <Interprete>Sam Brown</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>A and M</Discografica>
+    <Precio>8.90</Precio>
+    <Year>1988</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Bridge of Spies</Titulo>
+    <Interprete>T'Pau</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Siren</Discografica>
+    <Precio>7.90</Precio>
+    <Year>1987</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Private Dancer</Titulo>
+    <Interprete>Tina Turner</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>Capitol</Discografica>
+    <Precio>8.90</Precio>
+    <Year>1983</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Midt om natten</Titulo>
+    <Interprete>Kim Larsen</Interprete>
+    <Pais>EU</Pais>
+    <Discografica>Medley</Discografica>
+    <Precio>7.80</Precio>
+    <Year>1983</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Pavarotti Gala Concert</Titulo>
+    <Interprete>Luciano Pavarotti</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>DECCA</Discografica>
+    <Precio>9.90</Precio>
+    <Year>1991</Year>
+    </Disco>
+    <Disco>
+    <Titulo>The dock of the bay</Titulo>
+    <Interprete>Otis Redding</Interprete>
+    <Pais>USA</Pais>
+    <Discografica>Stax Records</Discografica>
+    <Precio>7.90</Precio>
+    <Year>1968</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Picture book</Titulo>
+    <Interprete>Simply Red</Interprete>
+    <Pais>EU</Pais>
+    <Discografica>Elektra</Discografica>
+    <Precio>7.20</Precio>
+    <Year>1985</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Red</Titulo>
+    <Interprete>The Communards</Interprete>
+    <Pais>UK</Pais>
+    <Discografica>London</Discografica>
+    <Precio>7.80</Precio>
+    <Year>1987</Year>
+    </Disco>
+    <Disco>
+    <Titulo>Unchain my heart</Titulo>
+    <Interprete>Joe Cocker</Interprete>
+    <Pais>USA</Pais>
+    <Discografica>EMI</Discografica>
+    <Precio>8.20</Precio>
+    <Year>1987</Year>
+    </Disco>
+    </Discoteca>
