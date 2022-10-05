@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+    background-image: url('../media/tension.jpg');
+    background-size:cover;
+    font-size: 2rem;
+}
+.container {
+    display: flex;
+    flex-flow: column center center;
+}
+
+form {
+    background-color: darkgrey;
+    color: greenyellow;
+    width: fit-content;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+input {
+    height: 2rem;
+}
+
+button {
+    display: flex;
+    margin: 0 auto;
+}
+
+#submitrow {
+    padding: 1rem;;
+}
