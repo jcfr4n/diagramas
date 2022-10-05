@@ -13,8 +13,9 @@ $sql = "INSERT INTO lecturas (id, idUser, pulsaciones, alta, baja, fecha) VALUES
 
 
 if (mysqli_query($conn, $sql)) {
-    echo ("<script>alert('inserción exitosa')</script>");
 
+    echo ("<script>alert('inserción exitosa')</script>");
+    mysqli_close($conn);
     header("Location:".$_SERVER['HTTP_REFERER']);
     
 }
