@@ -2,14 +2,12 @@ body {
     background-color: black;
     background-image: url('../media/tension.jpg');
     background-size:cover;
-    font-size: 2rem;
 }
 
-.container {
-    margin-top: 2rem;
-    display: flex;
-    flex-flow: column center center;
+header {
+    margin-bottom: 2rem;
 }
+
 
 form {
     
@@ -32,4 +30,9 @@ button {
 
 #submitrow {
     padding: 1rem;;
+}
+
+#listTable {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 1rem;
 }

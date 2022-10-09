@@ -1,6 +1,5 @@
 <?php
-
-include_once '../functions/connection.php';
+include_once './connection.php';
 
 $idUser = $_POST['idUser'];
 $pulsaciones = $_POST['pulsaciones'];
@@ -12,10 +11,8 @@ $baja = $_POST['baja'];
 $sql = "INSERT INTO lecturas (id, idUser, pulsaciones, alta, baja, fecha) VALUES (NULL, '$idUser', '$pulsaciones', '$alta', '$baja', current_timestamp())";
 
 
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query(conectar(), $sql)) {
 
     echo ("<script>alert('inserción exitosa')</script>");
-    mysqli_close($conn);
-    header("Location:".$_SERVER['HTTP_REFERER']);
-    
+    header("Location:" . $_SERVER['HTTP_REFERER']);
 }

@@ -1,11 +1,9 @@
 <?php
-session_destroy();
-session_start();
 
-include_once './header.php';
-include_once './navbar.php';
-include_once './insertForm.php';
-include_once './listMeasurements.php';
-include_once './footer.php';
+include_once './view/header.php';
+include_once './view/navbar.php';
+include_once './view/insertForm.php';
+include_once './view/listMeasurements.php';
+include_once './view/footer.php';
 
 ?>
