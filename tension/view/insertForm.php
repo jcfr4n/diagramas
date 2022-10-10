@@ -19,7 +19,7 @@
                     <td><label>Baja: </label></td>
                     <td><input type="text" name="baja"></td>
                 </tr>
-                <tr>
+                <tr style="display: none;">
                     <td><label>Fecha: </label></td>
                     <td><input type="datetime" name="fecha"></td>
                 </tr>

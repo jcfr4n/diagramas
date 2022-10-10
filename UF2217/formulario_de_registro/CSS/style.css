@@ -1,9 +1,51 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: beige;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
 .container {
     display: flex;
     justify-content: center;
 }
+.container2 {
+    display: flex;
+    justify-content: center;
+}
 
-fieldset {
+.alinear{
     width: 70%;
     max-width: 600px;
+    display: flex;
+    justify-content: start;
+}
+
+fieldset {
+    background-color: bisque;
+    width: 70%;
+    max-width: 600px;
+}
+
+.grupo {
+    display:flex;
+    flex-direction: column;
+
+}
+
+.formFooter {
+    padding: 0;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 600px;
+}
+
+input, textarea, select {
+    background-color: #dbd8d8;
 }

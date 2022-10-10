@@ -12,6 +12,7 @@
 <body>
     <main>
         <section>
+            <h1>Formulario de Registro</h1>
             <form action="#" method="get">
                 <div class="container">
                     <fieldset>
@@ -32,10 +33,51 @@
                         <input type="nombre" id="nombre" name="email" required><br><br>
                         <label for="apellido">Apellido:</label>
                         <input type="text" id="apellido" name="apellido"><br><br>
-                        <label for="contraseña">Contraseña:</label>
-                        <input type="text" id="contraseña" name="contraseña"><br><br>
-                        <p>La contraseña debe tener entre 4 y 6 caracteres</p>
+                        <label for="birth">Fecha de nacimiento:</label>
+                        <input type="date" id="birth" name="birth"><br><br>
+                        <div class="grupo">
+                            <p>Sexo:</p>
+                            <label for="sexom">
+                                <input type="radio" name="sexo" id="sexom" value="masculino"> Masculino
+                            </label>
+                            <label for="sexof">
+                                <input type="radio" name="sexo" id="sexof" value="femenino"> Femenino
+                            </label>
+                            <label for="sexop">
+                                <input type="radio" name="sexo" id="sexop" value="Pnd"> Prefiere no decirlo
+                            </label>
+                        </div>
                     </fieldset>
+                </div>
+                <div class="container">
+                    <fieldset>
+                        <legend>Datos Socioeconómicos:</legend>
+                        <label for="direccion">Dirección:</label>
+                        <br>
+                        <textarea id="direccion" name="direccion" cols="25" rows="4" required></textarea><br><br>
+                        <label for="movil">Móvil:</label>
+                        <input type="text" id="movil" name="movil"><br><br>
+                        <label for="tcredito">Tarjeta de Crédito:</label>
+                        <select name="tcredito" id="tcredito">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Master Card</option>
+                            <option value="amex">American Express</option>
+                            <option value="other">Otras</option>
+                        </select>
+                        <label for="numero">número:</label>
+                        <input type="text" id="numero" name="numero"><br><br>
+                    </fieldset>
+                </div>
+                <div class="container2">
+                    <div class="alinear">
+                        <input type="checkbox" name="politica" id="politica" checked>
+                        <label for="politica">Acepta nuestra política de privacidad</label>
+                    </div>
+                </div>
+                <br>
+                <div class="formFooter">
+                    <hr>
+                    <button type="submit">Enviar</button>
                 </div>
             </form>
         </section>
