@@ -1,6 +1,6 @@
 
 <div class="collapse" id="collapse1">
-    <!-- <div class="card card-body">
+    <div class="card card-body">
         <h5 class="card-title text-center">Insertar Alumno</h5>
         <form action="./controller/alumno.php" method="post" class="row g-3">
             <div class="col-md-6">
@@ -28,10 +28,10 @@
                 <button type="submit" class="btn btn-primary" name="submit" value="1">Insertar</button>
             </div>
         </form>
-    </div> -->
-    <?php 
-    $alumnos = new AlumnoController();
-    $alumnos->list();
+    </div>
+    <?php
+//    $alumnos = new AlumnoController();
+//    $alumnos->list();
     ?>
 </div>
 <div class="collapse" id="collapse2">
