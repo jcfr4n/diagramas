@@ -29,15 +29,15 @@ class alumno
 
     function getConnection()
     {
-        return $connection = new conn();
+        $connection = new conn();
+        echo 'Hola';
+        return $connection
     }
 
     function getAlumnos () {
+        $conn = $this->getConnection();
         $sql = "SELECT * FROM alumnos";
         $result = $this->getConnection()->query($sql);
-
-        var_dump($result);
-        die('hola');
 
         return $result;
     }

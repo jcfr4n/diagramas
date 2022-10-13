@@ -30,8 +30,8 @@
         </form>
     </div>
     <?php
-//    $alumnos = new AlumnoController();
-//    $alumnos->list();
+    $alumnos = new AlumnoController();
+    $alumnos->list();
     ?>
 </div>
 <div class="collapse" id="collapse2">
