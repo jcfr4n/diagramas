@@ -2,15 +2,14 @@
 
 require_once './model/conn.php';
 
-class alumno
-{
+class alumno {
+
     public $id;
     public $name;
     public $last_name1;
     public $last_name2;
     public $dni;
     public $phone;
-
 
     //  function __construct($name, $last_name1, $last_name2=null, $dni, $phone=null)
     //  {
@@ -19,26 +18,30 @@ class alumno
     //     $this->last_name2 = $last_name2;
     //     $this->dni = $dni;
     //     $this->phone = $phone;
-
     //  }
 
-    function __construct()
-    {
+    function __construct() {
         
     }
 
-    function getConnection()
-    {
+    function getConnection() {
         $connection = new conn();
-        echo 'Hola';
-        return $connection
+        return $connection;
     }
 
-    function getAlumnos () {
+    function getAlumnos() {
+        
         $conn = $this->getConnection();
-        $sql = "SELECT * FROM alumnos";
-        $result = $this->getConnection()->query($sql);
-
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("SELECT id, firstname, lastname FROM MyGuests");        
+        $stmt->execute();
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
+            echo $v;
+        }
+        die('pummmm');
         return $result;
     }
+
 }
