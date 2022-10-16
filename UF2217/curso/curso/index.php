@@ -10,7 +10,6 @@
     </head>
     <body>
         <?php
-        include_once"./controller/alumno.php";
         include_once"./view/navbar.php";
         include_once"./view/content.php";
         ?>
