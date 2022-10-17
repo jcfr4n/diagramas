@@ -1,6 +1,7 @@
 <?php
 
 require_once "./config.php";
+
 class conn {
 
     private $host;
@@ -13,12 +14,19 @@ class conn {
         $this->db = constant("DB");
         $this->user = constant("USER");
         $this->pass = constant("PASS");
-        
-        try {
-            $conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db, $this->user, $this->pass);
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
+
+// Create connection
+        $conn = new mysqli($this->host, $this->user, $this->pass, $this->db);
+// Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
+        echo '<pre>';
+        print_r($conn);
+        echo '<pre>';
+        die();
+        
+        return $conn;
     }
 
 }

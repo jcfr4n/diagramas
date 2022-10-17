@@ -25,23 +25,37 @@ class alumno {
     }
 
     function getConnection() {
-        $connection = new conn();
-        return $connection;
+        $conn = new conn();
     }
 
     function getAlumnos() {
+        $conn = new conn();
         
-        $conn = $this->getConnection();
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT id, firstname, lastname FROM MyGuests");        
-        $stmt->execute();
-        // set the resulting array to associative
-        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
-            echo $v;
+        echo '<pre>';
+        var_dump($conn);
+        echo '<pre>';
+        die();
+        
+        $sql = "SELECT * FROM alumnos";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            echo "<table><tr><th>ID</th><th>Nombre</th><th>1er Apellido</th><th>2do Apellido</th><th>dni</th><th>Teléfono</th></tr>";
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo 
+                "<tr><td>" 
+                    . $row["id"] . "</td><td>" 
+                    . $row["name"] . "</td><td>"
+                    . $row["last_name1"] . "</td><td>"
+                    . $row["last_name2"] . "</td><td>"
+                    . $row["dni"] . "</td><td>" 
+                    . $row["phone"] . "</td></tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
         }
-        die('pummmm');
-        return $result;
+        $conn->close();
     }
 
 }

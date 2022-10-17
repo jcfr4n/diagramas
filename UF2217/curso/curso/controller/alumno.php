@@ -17,7 +17,7 @@ class AlumnoController
     }
 
     public function list(){
-        return $this->alumnoObj->getAlumnos();
+        $this->alumnoObj->getAlumnos();
     }
     
 }

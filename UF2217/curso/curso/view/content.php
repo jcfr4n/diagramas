@@ -1,4 +1,6 @@
-
+<?php
+include_once"./controller/alumno.php";
+?>
 <div class="collapse" id="collapse1">
     <div class="card card-body">
         <h5 class="card-title text-center">Insertar Alumno</h5>
@@ -29,10 +31,10 @@
             </div>
         </form>
     </div>
-    <?php
-    $alumnos = new AlumnoController();
-    $alumnos->list();
-    ?>
+<?php
+$alumnos = new AlumnoController();
+$alumnos->list();
+?>
 </div>
 <div class="collapse" id="collapse2">
     <div class="card card-body">
